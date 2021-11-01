@@ -1,0 +1,184 @@
+/* line 1, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0px;
+  background-color: #f5faff;
+}
+
+/* line 7, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+header {
+  background-color: #e5f3ff;
+}
+
+/* line 12, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+a {
+  color: #00B7FF;
+  margin-right: 10px;
+}
+
+/* line 17, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+h1 {
+  text-align: center;
+  margin: 0px;
+  padding: 0.67em;
+}
+
+/* line 24, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+#titleBanner {
+  display: flex;
+  justify-content: space-between;
+  height: 45px;
+  border-bottom: 1px solid grey;
+}
+
+/* line 32, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+#navlinks {
+  display: flex;
+}
+
+/* line 37, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+#navlinks a {
+  margin: auto 10px;
+}
+
+/* line 46, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+#navlinks .nav_buttons {
+  display: inline-block;
+  margin: auto;
+  background: #011c37;
+  color: #15DEA5;
+  cursor: pointer;
+  padding: 0.6rem 1.5rem;
+  border-radius: 3.5rem;
+  transform: scale(1);
+  transition: transform 250ms, background-color 800ms, color 800ms;
+}
+
+/* line 57, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+#navlinks .nav_buttons:hover {
+  transform: scale(1.15);
+  background-color: #023364;
+  color: #19e6a5;
+}
+
+/* line 64, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+#logThumb {
+  display: flex;
+  /* contexte sur le parent */
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 71, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+#logThumbLogOutContainer {
+  margin: auto;
+}
+
+/* line 76, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+#logThumbLabel {
+  margin-right: 10px;
+}
+
+/* line 81, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+#logOutButton {
+  display: inline;
+  background-color: #011c37;
+  color: #15DEA5;
+  cursor: pointer;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 3.5rem;
+  transform: scale(1);
+  transition: transform 250ms, background-color 800ms, color 800ms;
+}
+
+/* line 92, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+#logOutButton:hover {
+  transform: scale(1.15);
+  background-color: #023364;
+  color: #19e6a5;
+}
+
+/* line 100, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+#welcomeMessage {
+  text-align: center;
+}
+
+/* line 105, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+#loggedUsersContainer {
+  border: 1px solid grey;
+  border-radius: 0.5rem;
+  width: max-content;
+  overflow: hidden;
+  margin-left: 4px;
+}
+
+/* line 114, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+#loggedUsersTitle {
+  border-bottom: 1px solid #b0b0b0;
+  background-color: #f0f0f0;
+  padding: 4px;
+}
+
+/* line 121, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+#loggedUsers {
+  padding: 4px;
+}
+
+/* line 126, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+#loggedUsers .userButtons {
+  cursor: pointer;
+}
+
+/* line 131, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+#webSocketMessage {
+  text-align: center;
+}
+
+/* line 138, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+#loggerPageMainBlock {
+  display: flex;
+  margin-top: 60px;
+  justify-content: space-around;
+}
+
+/* line 145, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+.blocklabels {
+  text-align: center;
+}
+
+/* line 150, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+#loggerFormTable {
+  display: flex;
+}
+
+/* line 155, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+#loggerFormLabels p {
+  padding: 8px;
+  margin: 0px;
+}
+
+/* line 161, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+#loggerFormImputs input {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+/* line 168, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+#registerFormTable {
+  display: flex;
+}
+
+/* line 173, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+#registerFormLabels p {
+  padding: 8px;
+  margin: 0px;
+}
+
+/* line 179, ../WebDev/V2/v2_app/public/stylesheets/scss/style.scss */
+#registerFormImputs input {
+  margin-top: 4px;
+  margin-bottom: 6px;
+}
+
+/*# sourceMappingURL=style.map */

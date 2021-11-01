@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='./stylesheets/style.css')
+  body
+    header
+        h1= title
+        #titleBanner
+            #navlinks
+                include ./navlinks.pug
+            #logThumb
+                include ./logthumb.pug
+    block content
+  script(src="./javascripts/socket.io/client-dist/socket.io.min.js")
+  script(src="./javascripts/websocketclient.js")
+   

@@ -1,0 +1,7 @@
+block logThumb
+    if user
+        div#logThumbLogOutContainer
+            form#logThumbLogOut(action="/log", name="logThumbLogOut", method="post")
+                span#logThumbLabel userlog : #{user}
+                input#logOutButton(type="submit" name="unsetAsked" method="post" value="logOut")
+    

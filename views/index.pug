@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  if !user
+    p#welcomeMessage Bienvenue sur le site #{title}
+  else
+    p#welcomeMessage Bienvenue sur le site #{title}, #{user}
+  div#maincontent
+    div#loggedUsersContainer
+        div#loggedUsersTitle Utilisateurs connectés :
+        div#loggedUsers
+            if sessions
+                for item in sessions.users
+                    if item != user
+                    span(class="userButtons") #{item}
+                    br
+  div#webSocketMessage  

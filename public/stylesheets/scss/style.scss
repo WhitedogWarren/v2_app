@@ -1,0 +1,186 @@
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    margin: 0px;
+    background-color: #f5faff;
+}
+
+header
+{
+    background-color: #e5f3ff;
+}
+
+a {
+    color: #00B7FF;
+    margin-right: 10px;
+}
+
+h1
+{
+    text-align: center;
+    margin: 0px;
+    padding: 0.67em;
+}
+
+#titleBanner
+{
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+    border-bottom: 1px solid grey;
+}
+
+#navlinks
+{
+    display: flex;
+}
+
+#navlinks a
+{
+    margin: auto 10px;
+}
+
+$cd-btn: #011c37;
+$cd-btn-hover: #023364;
+$cd-txt: #15DEA5;
+$cd-txt-hover: #19e6a5;
+#navlinks .nav_buttons
+{
+    display: inline-block;
+    margin:auto;
+    background: $cd-btn;
+    color: $cd-txt;
+    cursor: pointer;
+    padding: 0.6rem 1.5rem;
+    border-radius: 3.5rem;
+    transform: scale(1);
+    transition: transform 250ms, background-color 800ms, color 800ms;
+    &:hover {
+        transform: scale(1.15);
+        background-color: $cd-btn-hover;
+        color: $cd-txt-hover;
+    }
+}
+
+#logThumb
+{
+    display: flex; /* contexte sur le parent */
+    justify-content: center;
+    align-items: center;
+}
+
+#logThumbLogOutContainer
+{
+   margin: auto;
+}
+
+#logThumbLabel
+{
+    margin-right: 10px;
+}
+
+#logOutButton
+{
+    display: inline;
+    background-color: $cd-btn;
+    color: $cd-txt;
+    cursor: pointer;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 3.5rem;
+    transform: scale(1);
+    transition: transform 250ms, background-color 800ms, color 800ms;
+    &:hover {
+        transform: scale(1.15);
+        background-color: $cd-btn-hover;
+        color: $cd-txt-hover;
+    }
+}
+
+//index
+#welcomeMessage
+{
+    text-align: center;
+}
+
+#loggedUsersContainer
+{
+    border: 1px solid grey;
+    border-radius: 0.5rem;
+    width: max-content;
+    overflow: hidden;
+    margin-left: 4px;
+}
+
+#loggedUsersTitle
+{
+    border-bottom: 1px solid #b0b0b0;
+    background-color: #f0f0f0;
+    padding: 4px;
+}
+
+#loggedUsers
+{
+    padding: 4px;
+}
+
+#loggedUsers .userButtons
+{
+    cursor: pointer;
+}
+
+#webSocketMessage
+{
+    text-align: center;
+}
+
+//logpage
+
+#loggerPageMainBlock
+{
+    display: flex;
+    margin-top:60px;
+    justify-content: space-around;
+}
+
+.blocklabels
+{
+    text-align: center;
+}
+
+#loggerFormTable
+{
+    display: flex;
+}
+
+#loggerFormLabels p
+{
+    padding: 8px;
+    margin: 0px;
+}
+
+#loggerFormImputs input
+{
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+
+#registerFormTable
+{
+    display: flex;
+}
+
+#registerFormLabels p
+{
+    padding: 8px;
+    margin: 0px;
+}
+
+#registerFormImputs input
+{
+    margin-top: 4px;
+    margin-bottom: 6px;
+}
+
+
+
