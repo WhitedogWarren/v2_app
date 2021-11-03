@@ -2,47 +2,50 @@ const socket = io("192.168.1.58:8080", {withCredentials: true});
 
 function updateUserList(userList)
 {
-    if(document.getElementById("loggedUsers"))
+    if(document.getElementById("loggedUsers")){
         document.getElementById("loggedUsers").innerHTML = "";
-    for(i=0;i<userList.users.length;i++)
-    {
-        var hosts = [];
-        var guests = [];
-        if(userList.users[i] != username)
-        {
-            var userSpan = document.createElement("span");
-            userSpan.setAttribute('class', 'userButtons');
-            userSpan.setAttribute('name', userList.users[i]);
-            var spanContent = userList.users[i];
-            //récupérer les hostInvites et guestInvites
-            if(userList.guestInvites[i])
-            {
-                if(userList.guestInvites[i].indexOf(username)>-1)
-                spanContent += " <img src='./images/sablier.gif' alt='sablier'/>";
-                userSpan.addEventListener('click', () => {
-                    document.getElementById('webSocketMessage').innerHTML = "";
-                    document.getElementById('webSocketMessage').innerHTML = "<p>Vous avez déjà invité" + userList.users[i] + "</p>";
-                    setTimeout(function(){document.getElementById('webSocketMessage').innerHTML = "";}, 4000);
-                });
+        if(userList.users.length > 1){
+            for(i=0;i<userList.users.length;i++){
+                var hosts = [];
+                var guests = [];
+                if(userList.users[i] != username)
+                {
+                    var userSpan = document.createElement("span");
+                    userSpan.setAttribute('class', 'userButtons');
+                    userSpan.setAttribute('name', userList.users[i]);
+                    var spanContent = userList.users[i];
+                    //récupérer les hostInvites et guestInvites
+                    if(userList.guestInvites[i])
+                    {
+                        if(userList.guestInvites[i].indexOf(username)>-1)
+                        spanContent += " <img src='./images/sablier.gif' alt='sablier'/>";
+                        userSpan.addEventListener('click', () => {
+                            document.getElementById('webSocketMessage').innerHTML = "";
+                            document.getElementById('webSocketMessage').innerHTML = "<p>Vous avez déjà invité" + userList.users[i] + "</p>";
+                            setTimeout(function(){document.getElementById('webSocketMessage').innerHTML = "";}, 4000);
+                        });
+                    }
+                    if(userList.hostInvites[i])
+                    {
+                        if(userList.hostInvites[i].indexOf(username)>-1)
+                            spanContent += "<img src='./images/coucou.gif' alt='coucou' name='" + userList.users[i] + "'/>";
+                    
+                        userSpan.addEventListener('click', (event) => {
+                            console.log("hôte : " + event.target.getAttribute('name') + "\nInvité : " + username);
+                            socket.emit('openGame', {host: event.target.getAttribute('name'), guest: username});
+                        })
+                    }
+                    if(!userList.guestInvites[i] && !userList.hostInvites[i])
+                        userSpan.addEventListener('click', (event) => {inviteUser(event.target.getAttribute('name'));})
+                    userSpan.innerHTML = spanContent;
+                    document.getElementById("loggedUsers").appendChild(userSpan);
+                    if(i+1 != userList.users.length)
+                        document.getElementById("loggedUsers").appendChild(document.createElement("br"));
+                }
             }
-            
-            if(userList.hostInvites[i])
-            {
-                if(userList.hostInvites[i].indexOf(username)>-1)
-                spanContent += "<img src='./images/coucou.gif' alt='coucou' name='" + userList.users[i] + "'/>";
-                
-                userSpan.addEventListener('click', () => {
-                    console.log("hôte : " + event.target.getAttribute('name') + "\nInvité : " + username);
-                    socket.emit('openGame', {host: event.target.getAttribute('name'), guest: username});
-                })
-            }
-            if(!userList.guestInvites[i] && !userList.hostInvites[i])
-                userSpan.addEventListener('click', () => {inviteUser(event.target.getAttribute('name'));})
-            userSpan.innerHTML = spanContent;
-            document.getElementById("loggedUsers").appendChild(userSpan);
-            if(i+1 != userList.users.length)
-                document.getElementById("loggedUsers").appendChild(document.createElement("br"));
         }
+        else
+        document.getElementById("loggedUsers").innerHTML = '<span>Aucun</span>' 
     }
 }
 
@@ -57,7 +60,6 @@ if(document.getElementById('logThumbLabel')) //élément qui n'existe que si l'u
 {
     //créer une room perso ou rejoindre sa room
     var username = document.getElementById('logThumbLabel').innerHTML.substring(10);
-    console.log('username from queryselector : ' + username);
     var socket_ID;
     var data = sessionStorage.getItem('socketID');
             

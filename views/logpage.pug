@@ -3,7 +3,7 @@ extends layout
 block content
   p#welcomeMessage bienvenue sur le #{title}
   #loggerPageMainBlock
-    #logBlock
+    #logBlock.formBlock
         div.blocklabels connexion
         form.form(action="/log", name="logForm", method="post")
             .formTable
@@ -14,8 +14,8 @@ block content
                     input#logName(type="text", name="postedName")
                     br
                     input#logPass(type="text", name='postedPass')
-            input#logSubmit(type="submit" method="post" value="envoyer")
-    #registerBlock
+            input#logSubmit.submitButtons(type="submit" method="post" value="envoyer")
+    #registerBlock.formBlock
         div.blocklabels s'enregistrer
         form.form(action="/log", name="logForm", method="post")
             .formTable
@@ -26,7 +26,7 @@ block content
                     input#registerName(type="text", name="postedNewName" maxlength="20")
                     br
                     input#registerpass(type="text", name="postedNewPass" maxlength="20")
-            input#registerSubmit(type="submit", method="post" value="envoyer")
+            input#registerSubmit.submitButtons(type="submit", method="post" value="envoyer")
   if logError
     p Error : #{logError}
   if logMessage
