@@ -26,6 +26,7 @@ app.use(function(req, res, next) {
     next();
 });
 
+
 mongoose.connect('mongodb://localhost:27017/mydb', {useNewUrlParser: true, useUnifiedTopology: true});
 let _mongooseDBconnexion = null;
 var mongooseDBconnexion = mongoose.connection;
