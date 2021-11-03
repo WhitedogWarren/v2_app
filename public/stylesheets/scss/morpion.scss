@@ -1,3 +1,23 @@
+$cd-btn: #011c37;
+$cd-btn-hover: #023364;
+$cd-txt: #15DEA5;
+$cd-txt-hover: #67f72e;
+
+@mixin animatedButtons {
+    background: $cd-btn;
+    color: $cd-txt;
+    cursor: pointer;
+    padding: 0.6rem 1.5rem;
+    border-radius: 3.5rem;
+    transform: scale(1);
+    transition: transform 250ms, background-color 800ms, color 800ms;
+    &:hover {
+        transform: scale(1.15);
+        background-color: $cd-btn-hover;
+        color: $cd-txt-hover;
+    }
+}
+
 body {
     background-color: #1867AB;
     background-image: url("../images/morpion/body.jpg");
@@ -23,32 +43,13 @@ h1
 #navlinks
 {
     display: flex;
-}
-
-#navlinks a
-{
-    margin: auto 10px;
-}
-
-$cd-btn: #011c37;
-$cd-btn-hover: #023364;
-$cd-txt: #15DEA5;
-$cd-txt-hover: #19e6a5;
-#navlinks .nav_buttons
-{
-    display: inline-block;
-    margin:auto;
-    background: $cd-btn;
-    color: $cd-txt;
-    cursor: pointer;
-    padding: 0.6rem 1.5rem;
-    border-radius: 3.5rem;
-    transform: scale(1);
-    transition: transform 250ms, background-color 800ms, color 800ms;
-    &:hover {
-        transform: scale(1.15);
-        background-color: $cd-btn-hover;
-        color: $cd-txt-hover;
+    & a {
+        margin: auto 10px;
+    }
+    & .nav_buttons {
+        display: inline-block;
+        margin:auto;
+        @include animatedButtons();
     }
 }
 
@@ -57,34 +58,17 @@ $cd-txt-hover: #19e6a5;
     display: flex; /* contexte sur le parent */
     justify-content: center;
     align-items: center;
-}
-
-#logThumbLogOutContainer
-{
-   margin: auto;
-}
-
-#logThumbLabel
-{
-    margin-right: 10px;
+    & .container {
+        margin: auto;
+    }
 }
 
 #logOutButton
 {
-    display: inline;
-    background-color: $cd-btn;
-    color: $cd-txt;
-    cursor: pointer;
-    padding: 0.6rem 1.5rem;
+    display: inline-block;
+    margin: 0 1rem;
     border: none;
-    border-radius: 3.5rem;
-    transform: scale(1);
-    transition: transform 250ms, background-color 800ms, color 800ms;
-    &:hover {
-        transform: scale(1.15);
-        background-color: $cd-btn-hover;
-        color: $cd-txt-hover;
-    }
+    @include animatedButtons();
 }
 
 
