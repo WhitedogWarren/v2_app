@@ -10,8 +10,11 @@ block content
         div#loggedUsersTitle Utilisateurs connectés :
         div#loggedUsers
             if sessions
+              if sessions.length > 1
                 for item in sessions.users
-                    if item != user
+                  if item != user
                     span(class="userButtons") #{item}
                     br
+              else
+                span Aucun
   div#webSocketMessage  

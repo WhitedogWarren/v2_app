@@ -64,7 +64,7 @@ socket.on('gameResult', (data) => {
     reloadButton.setAttribute('data', 'host:' + sessionStorage.getItem('gameHost') + '-from:' + username + '-');
     reloadButton.innerHTML = 'Recommencer';
     reloadButton.style.cursor = 'pointer';
-    reloadButton.addEventListener('click', () => {
+    reloadButton.addEventListener('click', (event) => {
         console.log('target data : ' + event.target.getAttribute('data'));
         let reloadData = event.target.getAttribute('data');
         let reloadHost = reloadData.substring(reloadData.indexOf('host:') + 5, reloadData.indexOf('-', reloadData.indexOf('host:')));
@@ -96,7 +96,7 @@ socket.on('gameLeft', (data) => {
 })
 
 // Création du plateau de jeu
-function handleCellClick(){
+function handleCellClick(event){
     ////
     // TODO : récupérer le nom de case quand l'utilisateur clique sur le token d'une case déjà jouée
     ////
