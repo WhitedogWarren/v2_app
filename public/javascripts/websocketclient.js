@@ -57,6 +57,7 @@ if(document.getElementById('logThumbLabel')) //élément qui n'existe que si l'u
 {
     //créer une room perso ou rejoindre sa room
     var username = document.getElementById('logThumbLabel').innerHTML.substring(10);
+    console.log('username from queryselector : ' + username);
     var socket_ID;
     var data = sessionStorage.getItem('socketID');
             

@@ -5,24 +5,24 @@ block content
   #loggerPageMainBlock
     #logBlock
         div.blocklabels connexion
-        form#loggerForm(action="/log", name="logForm", method="post")
-            #loggerFormTable
-                #loggerFormLabels
+        form.form(action="/log", name="logForm", method="post")
+            .formTable
+                .inputLabels
                     p pseudo :
                     p Mot de passe : 
-                #loggerFormImputs
+                .inputBlock
                     input#logName(type="text", name="postedName")
                     br
                     input#logPass(type="text", name='postedPass')
             input#logSubmit(type="submit" method="post" value="envoyer")
     #registerBlock
         div.blocklabels s'enregistrer
-        form#registerForm(action="/log", name="logForm", method="post")
-            #registerFormTable
-                #registerFormLabels
+        form.form(action="/log", name="logForm", method="post")
+            .formTable
+                .inputLabels
                     p pseudo :
                     p Mot de passe :
-                #registerFormImputs
+                .inputBlock
                     input#registerName(type="text", name="postedNewName" maxlength="20")
                     br
                     input#registerpass(type="text", name="postedNewPass" maxlength="20")
