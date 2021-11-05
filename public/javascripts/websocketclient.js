@@ -126,4 +126,5 @@ else //utilisateur non connecté ou session perdue
 {
     sessionStorage.removeItem('socketID');
     socket.disconnect();
+    document.getElementById("loggedUsers").innerHTML = "Vous n'êtes pas connecté";
 }

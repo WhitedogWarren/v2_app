@@ -5,7 +5,7 @@ body {
 }
 
 header {
-  background-color: #e5f3ff;
+  background-color: #e0ebf3;
 }
 
 a {
@@ -111,14 +111,15 @@ h1 {
 #loggedUsersContainer {
   border: 1px solid #b4b4b4;
   border-radius: 0.5rem;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
   overflow: hidden;
-  margin-left: 4px;
+  padding: 0;
   -webkit-box-shadow: inset 1px 1px 3px #6776c7;
           box-shadow: inset 1px 1px 3px #6776c7;
   background-color: #ebf3fc;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-left: 4px;
 }
 
 #loggedUsersTitle {

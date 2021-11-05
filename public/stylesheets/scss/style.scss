@@ -35,7 +35,7 @@ body {
 
 header
 {
-    background-color: #e5f3ff;
+    background-color: #e0ebf3;
 }
 
 a {
@@ -97,13 +97,9 @@ h1
 
 #loggedUsersContainer
 {
-    border: 1px solid rgb(180, 180, 180);
-    border-radius: 0.5rem;
+    @include formBlock();
     width: max-content;
-    overflow: hidden;
     margin-left: 4px;
-    box-shadow: inset 1px 1px 3px rgb(103, 118, 199);
-    background-color: #ebf3fc;
 }
 
 #loggedUsersTitle

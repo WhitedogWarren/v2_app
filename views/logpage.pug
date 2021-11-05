@@ -1,35 +1,34 @@
 extends layout
 
 block content
-  p#welcomeMessage bienvenue sur le #{title}
-  #loggerPageMainBlock
-    #logBlock.formBlock
-        div.blocklabels connexion
-        form.form(action="/log", name="logForm", method="post")
-            .formTable
-                .inputLabels
-                    p pseudo :
-                    p Mot de passe : 
-                .inputBlock
-                    input#logName(type="text", name="postedName")
-                    br
-                    input#logPass(type="text", name='postedPass')
-            input#logSubmit.submitButtons(type="submit" method="post" value="envoyer")
-    #registerBlock.formBlock
-        div.blocklabels s'enregistrer
-        form.form(action="/log", name="logForm", method="post")
-            .formTable
-                .inputLabels
-                    p pseudo :
-                    p Mot de passe :
-                .inputBlock
-                    input#registerName(type="text", name="postedNewName" maxlength="20")
-                    br
-                    input#registerpass(type="text", name="postedNewPass" maxlength="20")
-            input#registerSubmit.submitButtons(type="submit", method="post" value="envoyer")
-  if logError
-    p Error : #{logError}
-  if logMessage
-    p #{logMessage}
-  
-            
+    div#pageContent
+        p#welcomeMessage bienvenue sur le #{title}
+        #loggerPageMainBlock
+            #logBlock.formBlock
+                div.blocklabels connexion
+                form.form(action="/log", name="logForm", method="post")
+                    .formTable
+                        .inputLabels
+                            p pseudo :
+                            p Mot de passe : 
+                        .inputBlock
+                            input#logName(type="text", name="postedName")
+                            br
+                            input#logPass(type="text", name='postedPass')
+                    input#logSubmit.submitButtons(type="submit" method="post" value="envoyer")
+            #registerBlock.formBlock
+                div.blocklabels s'enregistrer
+                form.form(action="/log", name="registerForm", method="post")
+                    .formTable
+                        .inputLabels
+                            p pseudo :
+                            p Mot de passe :
+                        .inputBlock
+                            input#registerName(type="text", name="postedNewName" maxlength="20")
+                            br
+                            input#registerpass(type="text", name="postedNewPass" maxlength="20")
+                    input#registerSubmit.submitButtons(type="submit", method="post" value="envoyer")
+        if logError
+            p#logError Error : #{logError}
+        if logMessage
+            p #{logMessage}
