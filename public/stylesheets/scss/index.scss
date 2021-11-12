@@ -1,0 +1,45 @@
+@mixin formBlock {
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    padding: 0;
+    box-shadow: inset 1px 1px 3px rgb(103, 118, 199);
+    background-color: #ebf3fc;
+}
+
+body {
+    background-image: url("../images/labyrinthe2.png");
+    background-position: top center;
+}
+
+#welcomeMessage
+{
+    text-align: center;
+}
+
+#loggedUsersContainer
+{
+    @include formBlock();
+    width: max-content;
+    margin-left: 4px;
+}
+
+#loggedUsersTitle
+{
+    border-bottom: 1px solid #b0b0b0;
+    background-color: rgba(190, 207, 226, 0.4);
+    padding: 4px;
+}
+
+#loggedUsers
+{
+    padding: 4px;
+    & .userButtons {
+        cursor: pointer;
+    }
+}
+
+#webSocketMessage
+{
+    text-align: center;
+}

@@ -6,29 +6,30 @@ block content
         #loggerPageMainBlock
             #logBlock.formBlock
                 div.blocklabels connexion
-                form.form(action="/log", name="logForm", method="post")
+                form#logForm.form(action="/log", name="logForm", method="post")
                     .formTable
                         .inputLabels
                             p pseudo :
                             p Mot de passe : 
                         .inputBlock
-                            input#logName(type="text", name="postedName")
+                            input#logName(type="text", name="postedName" autofocus placeholder="votre pseudo")
                             br
-                            input#logPass(type="text", name='postedPass')
+                            input#logPass(type="text", name='postedPass' placeholder="mot de passe")
                     input#logSubmit.submitButtons(type="submit" method="post" value="envoyer")
             #registerBlock.formBlock
                 div.blocklabels s'enregistrer
-                form.form(action="/log", name="registerForm", method="post")
+                form#registerForm.form(action="/log", name="registerForm", method="post")
                     .formTable
                         .inputLabels
                             p pseudo :
                             p Mot de passe :
                         .inputBlock
-                            input#registerName(type="text", name="postedNewName" maxlength="20")
+                            input#registerName(type="text", name="postedNewName" maxlength="20" placeholder="choisir un pseudo")
                             br
-                            input#registerpass(type="text", name="postedNewPass" maxlength="20")
+                            input#registerpass(type="text", name="postedNewPass" maxlength="20" placeholder="Définir un mot de passe")
                     input#registerSubmit.submitButtons(type="submit", method="post" value="envoyer")
         if logError
             p#logError Error : #{logError}
         if logMessage
             p #{logMessage}
+        p#testMessage

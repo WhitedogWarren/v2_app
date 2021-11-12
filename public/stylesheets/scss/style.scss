@@ -18,15 +18,6 @@ $cd-txt-hover: #67f72e;
     }
 }
 
-@mixin formBlock {
-    border: 1px solid rgb(180, 180, 180);
-    border-radius: 0.5rem;
-    overflow: hidden;
-    padding: 0;
-    box-shadow: inset 1px 1px 3px rgb(103, 118, 199);
-    background-color: #ebf3fc;
-}
-
 body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     margin: 0px;
@@ -90,77 +81,10 @@ h1
 }
 
 //index
-#welcomeMessage
-{
-    text-align: center;
-}
 
-#loggedUsersContainer
-{
-    @include formBlock();
-    width: max-content;
-    margin-left: 4px;
-}
 
-#loggedUsersTitle
-{
-    border-bottom: 1px solid #b0b0b0;
-    background-color: rgba(190, 207, 226, 0.4);
-    padding: 4px;
-}
 
-#loggedUsers
-{
-    padding: 4px;
-    & .userButtons {
-        cursor: pointer;
-    }
-}
-
-#webSocketMessage
-{
-    text-align: center;
-}
 
 //logpage
 
-.blocklabels {
-    text-align: center;
-    background-color: rgba(190, 207, 226, 0.4);
-    padding: 0.5rem;
-}
 
-.formTable {
-    display: flex;
-    margin: 0.5rem 1.5rem;
-}
-
-.form {
-    text-align: center;
-}
-
-.submitButtons {
-    margin: 0.5rem;
-}
-
-.inputLabels p {
-    padding: 8px;
-    margin: 0px;
-    text-align: left;
-}
-
-.inputBlock input {
-    margin-top: 6px;
-    margin-bottom: 6px;
-}
-
-#loggerPageMainBlock
-{
-    display: flex;
-    margin-top:60px;
-    justify-content: space-around;
-}
-
-.formBlock {
-    @include formBlock();
-}

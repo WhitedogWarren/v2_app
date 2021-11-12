@@ -1,4 +1,41 @@
 body {
-    background-image: url("../images/labyrinthe2.png");
-    background-position: top center;
+  background-image: url("../images/labyrinthe2.png");
+  background-position: top center;
 }
+
+#welcomeMessage {
+  text-align: center;
+}
+
+#loggedUsersContainer {
+  border: 1px solid #b4b4b4;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  padding: 0;
+  -webkit-box-shadow: inset 1px 1px 3px #6776c7;
+          box-shadow: inset 1px 1px 3px #6776c7;
+  background-color: #ebf3fc;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-left: 4px;
+}
+
+#loggedUsersTitle {
+  border-bottom: 1px solid #b0b0b0;
+  background-color: rgba(190, 207, 226, 0.4);
+  padding: 4px;
+}
+
+#loggedUsers {
+  padding: 4px;
+}
+
+#loggedUsers .userButtons {
+  cursor: pointer;
+}
+
+#webSocketMessage {
+  text-align: center;
+}
+/*# sourceMappingURL=index.css.map */
