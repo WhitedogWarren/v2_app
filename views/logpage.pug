@@ -1,6 +1,7 @@
 extends layout
 
 block content
+<<<<<<< Updated upstream
   p#welcomeMessage bienvenue sur le #{title}
   #loggerPageMainBlock
     #logBlock.formBlock
@@ -33,3 +34,37 @@ block content
     p #{logMessage}
   
             
+=======
+    div#pageContent
+        p#welcomeMessage bienvenue sur le #{title}
+        #loggerPageMainBlock
+            #logBlock.formBlock
+                div.blocklabels connexion
+                form#logForm.form(action="/log", name="logForm", method="post")
+                    .formTable
+                        .inputLabels
+                            p pseudo :
+                            p Mot de passe : 
+                        .inputBlock
+                            input#logName.form-input(type="text", name="postedName" autofocus placeholder="votre pseudo")
+                            br
+                            input#logPass.form-input(type="text", name='postedPass' placeholder="mot de passe")
+                    input#logSubmit.submitButtons(type="submit" method="post" value="envoyer")
+            #registerBlock.formBlock
+                div.blocklabels s'enregistrer
+                form#registerForm.form(action="/log", name="registerForm", method="post")
+                    .formTable
+                        .inputLabels
+                            p pseudo :
+                            p Mot de passe :
+                        .inputBlock
+                            input#registerName.form-input(type="text", name="postedNewName" maxlength="20" placeholder="choisir un pseudo")
+                            br
+                            input#registerpass.form-input(type="text", name="postedNewPass" maxlength="20" placeholder="Définir un mot de passe")
+                    input#registerSubmit.submitButtons(type="submit", method="post" value="envoyer")
+        if logError
+            p#logError Error : #{logError}
+        if logMessage
+            p #{logMessage}
+        p#testMessage
+>>>>>>> Stashed changes
