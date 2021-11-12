@@ -16,17 +16,14 @@ logForm.addEventListener('submit', event => {
     if(checkLogInputs()){
         logForm.submit();
     }
-    else{
-        document.body.style.backgroundImage = 'url("../images/logger_claire2_red.png")';
-    }
 });
 
-logNameElement.addEventListener('input', event => {
-    checkLogName();
+logNameElement.addEventListener('change', event => {
+    checkLogInputs();
 });
 
-logPassElement.addEventListener('input', event => {
-    checkLogPass();
+logPassElement.addEventListener('change', event => {
+    checkLogInputs();
 });
 
 function checkLogInputs(){
@@ -36,6 +33,12 @@ function checkLogInputs(){
     }
     if(!checkLogPass()){
         response = false;
+    }
+    if(response){
+        document.body.style.backgroundImage = 'url("../images/logger_claire2_red.png")';
+    }
+    else{
+        document.body.style.backgroundImage = 'url("../images/logger_claire2_red.png")';
     }
     return response;
 }
