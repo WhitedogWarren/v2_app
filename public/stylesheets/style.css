@@ -5,7 +5,7 @@ body {
 }
 
 header {
-  background-color: #e5f3ff;
+  background-color: #e0ebf3;
 }
 
 a {
@@ -102,91 +102,5 @@ h1 {
           transform: scale(1.15);
   background-color: #023364;
   color: #67f72e;
-}
-
-#welcomeMessage {
-  text-align: center;
-}
-
-#loggedUsersContainer {
-  border: 1px solid #b4b4b4;
-  border-radius: 0.5rem;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  overflow: hidden;
-  margin-left: 4px;
-  -webkit-box-shadow: inset 1px 1px 3px #6776c7;
-          box-shadow: inset 1px 1px 3px #6776c7;
-  background-color: #ebf3fc;
-}
-
-#loggedUsersTitle {
-  border-bottom: 1px solid #b0b0b0;
-  background-color: rgba(190, 207, 226, 0.4);
-  padding: 4px;
-}
-
-#loggedUsers {
-  padding: 4px;
-}
-
-#loggedUsers .userButtons {
-  cursor: pointer;
-}
-
-#webSocketMessage {
-  text-align: center;
-}
-
-.blocklabels {
-  text-align: center;
-  background-color: rgba(190, 207, 226, 0.4);
-  padding: 0.5rem;
-}
-
-.formTable {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0.5rem 1.5rem;
-}
-
-.form {
-  text-align: center;
-}
-
-.submitButtons {
-  margin: 0.5rem;
-}
-
-.inputLabels p {
-  padding: 8px;
-  margin: 0px;
-  text-align: left;
-}
-
-.inputBlock input {
-  margin-top: 6px;
-  margin-bottom: 6px;
-}
-
-#loggerPageMainBlock {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 60px;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.formBlock {
-  border: 1px solid #b4b4b4;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  padding: 0;
-  -webkit-box-shadow: inset 1px 1px 3px #6776c7;
-          box-shadow: inset 1px 1px 3px #6776c7;
-  background-color: #ebf3fc;
 }
 /*# sourceMappingURL=style.css.map */

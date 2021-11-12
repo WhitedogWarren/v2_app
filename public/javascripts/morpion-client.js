@@ -128,7 +128,7 @@ function makeCellsBlink(cells){
             for(let cell of cells){
                 document.getElementById(cell).firstChild.style.color = document.getElementById(cell).firstChild.style.color.substring(0,7) + (document.getElementById(cell).firstChild.style.color.substring(7, document.getElementById(cell).firstChild.style.color.lastIndexOf(',')) -0 +20) + document.getElementById(cell).firstChild.style.color.substring(document.getElementById(cell).firstChild.style.color.lastIndexOf(','));
             }
-        }, 20);
+        }, 25);
     };
     
     function fadeToBlack(){
@@ -138,7 +138,7 @@ function makeCellsBlink(cells){
             for(let cell of cells){
                 document.getElementById(cell).firstChild.style.color = document.getElementById(cell).firstChild.style.color.substring(0,7) + (document.getElementById(cell).firstChild.style.color.substring(7, document.getElementById(cell).firstChild.style.color.lastIndexOf(',')) -20) + document.getElementById(cell).firstChild.style.color.substring(document.getElementById(cell).firstChild.style.color.lastIndexOf(','));
             }
-        }, 20);
+        }, 25);
     };
     
     blink = setInterval(() => {

@@ -52,7 +52,7 @@ h1 {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
   background-color: #023364;
-  color: #19e6a5;
+  color: #67f72e;
 }
 
 #logThumb {
@@ -68,21 +68,18 @@ h1 {
           align-items: center;
 }
 
-#logThumbLogOutContainer {
+#logThumb .container {
   margin: auto;
 }
 
-#logThumbLabel {
-  margin-right: 10px;
-}
-
 #logOutButton {
-  display: inline;
-  background-color: #011c37;
+  display: inline-block;
+  margin: 0 1rem;
+  border: none;
+  background: #011c37;
   color: #15DEA5;
   cursor: pointer;
   padding: 0.6rem 1.5rem;
-  border: none;
   border-radius: 3.5rem;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -96,7 +93,7 @@ h1 {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
   background-color: #023364;
-  color: #19e6a5;
+  color: #67f72e;
 }
 
 #gameContainer {

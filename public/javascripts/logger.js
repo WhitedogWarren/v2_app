@@ -18,12 +18,21 @@ logForm.addEventListener('submit', event => {
     }
 });
 
+<<<<<<< HEAD
 logNameElement.addEventListener('change', event => {
     checkLogInputs();
 });
 
 logPassElement.addEventListener('change', event => {
     checkLogInputs();
+=======
+logNameElement.addEventListener('input', event => {
+    checkLogName();
+});
+
+logPassElement.addEventListener('input', event => {
+    checkLogPass();
+>>>>>>> 17196a7849abbd6a43503245b3eeea97ea013997
 });
 
 function checkLogInputs(){
@@ -34,12 +43,15 @@ function checkLogInputs(){
     if(!checkLogPass()){
         response = false;
     }
+<<<<<<< HEAD
     if(response){
         document.body.style.backgroundImage = 'url("../images/logger_claire2_red.png")';
     }
     else{
         document.body.style.backgroundImage = 'url("../images/logger_claire2_red.png")';
     }
+=======
+>>>>>>> 17196a7849abbd6a43503245b3eeea97ea013997
     return response;
 }
 
@@ -70,11 +82,16 @@ function checkLogPass(){
 registerForm.addEventListener('submit', event => {
     event.preventDefault();
     if(checkRegisterInputs()){
+<<<<<<< HEAD
         //console.log('Validé');
         registerForm.submit();
     }
     else{
         document.body.style.backgroundImage = 'url("../images/logger_claire2_red.png")';
+=======
+        console.log('Validé');
+        //registerForm.submit();
+>>>>>>> 17196a7849abbd6a43503245b3eeea97ea013997
     }
 });
 

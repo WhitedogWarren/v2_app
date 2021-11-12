@@ -7,6 +7,7 @@ body {
   text-align: center;
 }
 
+<<<<<<< HEAD
 #loggerPageMainBlock {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -30,6 +31,8 @@ body {
   text-align: center;
 }
 
+=======
+>>>>>>> 17196a7849abbd6a43503245b3eeea97ea013997
 .blocklabels {
   text-align: center;
   background-color: rgba(190, 207, 226, 0.4);
@@ -43,17 +46,33 @@ body {
   margin: 0.5rem 1.5rem;
 }
 
+<<<<<<< HEAD
+=======
+.form {
+  text-align: center;
+}
+
+.submitButtons {
+  margin: 0.5rem;
+}
+
+>>>>>>> 17196a7849abbd6a43503245b3eeea97ea013997
 .inputLabels p {
   padding: 8px;
   margin: 0px;
   text-align: left;
 }
 
+<<<<<<< HEAD
 .form-input {
+=======
+.inputBlock input {
+>>>>>>> 17196a7849abbd6a43503245b3eeea97ea013997
   margin-top: 6px;
   margin-bottom: 6px;
 }
 
+<<<<<<< HEAD
 .form-input.not-valid {
   border: 1px solid #000;
   background-color: #fc9c9c;
@@ -77,5 +96,24 @@ body {
 
 .submitButtons {
   margin: 0.5rem;
+=======
+#loggerPageMainBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 60px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.formBlock {
+  border: 1px solid #b4b4b4;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  padding: 0;
+  -webkit-box-shadow: inset 1px 1px 3px #6776c7;
+          box-shadow: inset 1px 1px 3px #6776c7;
+  background-color: #ebf3fc;
+>>>>>>> 17196a7849abbd6a43503245b3eeea97ea013997
 }
 /*# sourceMappingURL=logger.css.map */

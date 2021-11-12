@@ -9,7 +9,7 @@ const sessionsManage = require('../handmade_modules/sessionsManage.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    var renderObject = { title: 'Multi_V2'};
+    var renderObject = { title: 'Multi_V2', page: 'index'};
     sessionsManage.confirmLoading(res);
     if(req.session.user)
     {
