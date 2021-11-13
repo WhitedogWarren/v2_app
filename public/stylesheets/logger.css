@@ -3,40 +3,8 @@ body {
   background-position: top center;
 }
 
-#welcomeMessage, #testMessage {
+#welcomeMessage, #logError, #logMessage, #testMessage {
   text-align: center;
-}
-
-.blocklabels {
-  text-align: center;
-  background-color: rgba(190, 207, 226, 0.4);
-  padding: 0.5rem;
-}
-
-.formTable {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0.5rem 1.5rem;
-}
-
-.form {
-  text-align: center;
-}
-
-.submitButtons {
-  margin: 0.5rem;
-}
-
-.inputLabels p {
-  padding: 8px;
-  margin: 0px;
-  text-align: left;
-}
-
-.inputBlock input {
-  margin-top: 6px;
-  margin-bottom: 6px;
 }
 
 #loggerPageMainBlock {
@@ -56,5 +24,58 @@ body {
   -webkit-box-shadow: inset 1px 1px 3px #6776c7;
           box-shadow: inset 1px 1px 3px #6776c7;
   background-color: #ebf3fc;
+}
+
+.form {
+  text-align: center;
+}
+
+.blocklabels {
+  text-align: center;
+  background-color: rgba(190, 207, 226, 0.4);
+  padding: 0.5rem;
+}
+
+.formTable {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.5rem 1.5rem;
+}
+
+.inputLabels p {
+  padding: 8px;
+  margin: 0px;
+  text-align: left;
+}
+
+.form-input {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.form-input.not-valid {
+  border: 1px solid #000;
+  background-color: #fc9c9c;
+}
+
+.form-input:-webkit-autofill, .form-input:-webkit-autofill:hover, .form-input:-webkit-autofill:focus, .form-input:-webkit-autofill:visited {
+  border: 1px solid #000;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  box-shadow: 0 0 0px 1000px #fff inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.form-input:-webkit-autofill.not-valid, .form-input:-webkit-autofill:hover.not-valid, .form-input:-webkit-autofill:focus.not-valid, .form-input:-webkit-autofill:visited.not-valid {
+  border: 1px solid #000;
+  -webkit-box-shadow: 0 0 0px 1000px #fc9c9c inset;
+  box-shadow: 0 0 0px 1000px #fc9c9c inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.submitButtons {
+  margin: 0.5rem;
 }
 /*# sourceMappingURL=logger.css.map */

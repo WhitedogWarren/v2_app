@@ -12,9 +12,9 @@ block content
                             p pseudo :
                             p Mot de passe : 
                         .inputBlock
-                            input#logName(type="text", name="postedName" autofocus placeholder="votre pseudo")
+                            input#logName.form-input(type="text", name="postedName" autofocus placeholder="votre pseudo")
                             br
-                            input#logPass(type="text", name='postedPass' placeholder="mot de passe")
+                            input#logPass.form-input(type="text", name='postedPass' placeholder="mot de passe")
                     input#logSubmit.submitButtons(type="submit" method="post" value="envoyer")
             #registerBlock.formBlock
                 div.blocklabels s'enregistrer
@@ -24,12 +24,12 @@ block content
                             p pseudo :
                             p Mot de passe :
                         .inputBlock
-                            input#registerName(type="text", name="postedNewName" maxlength="20" placeholder="choisir un pseudo")
+                            input#registerName.form-input(type="text", name="postedNewName" maxlength="20" placeholder="choisir un pseudo")
                             br
-                            input#registerpass(type="text", name="postedNewPass" maxlength="20" placeholder="Définir un mot de passe")
+                            input#registerpass.form-input(type="text", name="postedNewPass" maxlength="20" placeholder="Définir un mot de passe")
                     input#registerSubmit.submitButtons(type="submit", method="post" value="envoyer")
         if logError
             p#logError Error : #{logError}
         if logMessage
-            p #{logMessage}
+            p#logMessage #{logMessage}
         p#testMessage

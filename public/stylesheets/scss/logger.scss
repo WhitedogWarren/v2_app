@@ -12,8 +12,23 @@ body {
     background-position: top center;
 }
 
-#welcomeMessage, #testMessage
+#welcomeMessage, #logError, #logMessage, #testMessage
 {
+    text-align: center;
+}
+
+#loggerPageMainBlock
+{
+    display: flex;
+    margin-top:60px;
+    justify-content: space-around;
+}
+
+.formBlock {
+    @include formBlock();
+}
+
+.form {
     text-align: center;
 }
 
@@ -28,32 +43,36 @@ body {
     margin: 0.5rem 1.5rem;
 }
 
-.form {
-    text-align: center;
-}
-
-.submitButtons {
-    margin: 0.5rem;
-}
-
 .inputLabels p {
     padding: 8px;
     margin: 0px;
     text-align: left;
 }
 
-.inputBlock input {
+.form-input {
     margin-top: 6px;
     margin-bottom: 6px;
+    &.not-valid{
+        border: 1px solid #000;
+        background-color: rgb(252, 156, 156);
+    }
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:visited{
+        border: 1px solid #000;
+        -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+        box-shadow: 0 0 0px 1000px #fff inset;;
+        transition: background-color 5000s ease-in-out 0s;
+        &.not-valid{
+            border: 1px solid #000;
+            -webkit-box-shadow: 0 0 0px 1000px rgb(252, 156, 156) inset;
+            box-shadow: 0 0 0px 1000px rgb(252, 156, 156) inset;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+    }
 }
 
-#loggerPageMainBlock
-{
-    display: flex;
-    margin-top:60px;
-    justify-content: space-around;
-}
-
-.formBlock {
-    @include formBlock();
+.submitButtons {
+    margin: 0.5rem;
 }

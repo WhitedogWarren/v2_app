@@ -78,6 +78,7 @@ h1
     margin: 0 1rem;
     border: none;
     @include animatedButtons();
+<<<<<<< Updated upstream
 }
 
 //index
@@ -88,3 +89,11 @@ h1
 //logpage
 
 
+<<<<<<< HEAD
+.formBlock {
+    @include formBlock();
+=======
+>>>>>>> Stashed changes
+}
+=======
+>>>>>>> 17196a7849abbd6a43503245b3eeea97ea013997
