@@ -6,6 +6,8 @@ let registerForm = document.getElementById('registerForm');
 let registerNameElement = document.getElementById('registerName');
 let registerPassElement = document.getElementById('registerpass');
 
+let messageElement = document.getElementById('testMessage');
+
 ////
 //prévalidation des formulaires
 ////
@@ -16,42 +18,38 @@ logForm.addEventListener('submit', event => {
     if(checkLogInputs()){
         logForm.submit();
     }
+    else{
+        document.body.style.backgroundImage = 'url("../images/logger_claire2_red.png")';
+    }
 });
 
-<<<<<<< HEAD
 logNameElement.addEventListener('change', event => {
     checkLogInputs();
 });
 
 logPassElement.addEventListener('change', event => {
     checkLogInputs();
-=======
-logNameElement.addEventListener('input', event => {
-    checkLogName();
-});
-
-logPassElement.addEventListener('input', event => {
-    checkLogPass();
->>>>>>> 17196a7849abbd6a43503245b3eeea97ea013997
 });
 
 function checkLogInputs(){
     let response = true;
+    messageElement.innerHTML = '';
     if(!checkLogName()){
+        messageElement.innerHTML = 'Pseudo requis';
         response = false;
     }
     if(!checkLogPass()){
+        if(!response)
+        messageElement.innerHTML += '<br/>';
+        messageElement.innerHTML += 'Mot de passe requis';
         response = false;
     }
-<<<<<<< HEAD
     if(response){
-        document.body.style.backgroundImage = 'url("../images/logger_claire2_red.png")';
+        document.body.style.backgroundImage = 'url("../images/logger_claire2_base.png")';
     }
     else{
-        document.body.style.backgroundImage = 'url("../images/logger_claire2_red.png")';
+        document.body.style.backgroundImage = 'url("../images/logger_claire2_orange.png")';
     }
-=======
->>>>>>> 17196a7849abbd6a43503245b3eeea97ea013997
     return response;
 }
 
@@ -82,16 +80,11 @@ function checkLogPass(){
 registerForm.addEventListener('submit', event => {
     event.preventDefault();
     if(checkRegisterInputs()){
-<<<<<<< HEAD
         //console.log('Validé');
         registerForm.submit();
     }
     else{
         document.body.style.backgroundImage = 'url("../images/logger_claire2_red.png")';
-=======
-        console.log('Validé');
-        //registerForm.submit();
->>>>>>> 17196a7849abbd6a43503245b3eeea97ea013997
     }
 });
 
@@ -146,26 +139,43 @@ function checkRegisterPass(){
 
 function warnRegisterName(name){
     document.getElementById('testMessage').innerHTML = '';
+    let isValid = true;
     if(name.length < 3 ){
         document.getElementById('testMessage').innerHTML = '';
         document.getElementById('testMessage').innerHTML = 'Pseudo trop court';
+        isValid = false;
     }
     if(name.length > 20){
         document.getElementById('testMessage').innerHTML = '';
         document.getElementById('testMessage').innerHTML = 'Pseudo trop long';
+        isValid = false;
     }
-    
+    if(isValid){
+        document.body.style.backgroundImage = 'url("../images/logger_claire2_base.png")';
+    }
+    else{
+        document.body.style.backgroundImage = 'url("../images/logger_claire2_orange.png")';
+    }
 }
 
 function warnRegisterPass(pass){
+    let isValid = true;
     document.getElementById('testMessage').innerHTML = '';
     if(pass.length < 6){
         document.getElementById('testMessage').innerHTML = '';
-        document.getElementById('testMessage').innerHTML = 'Mot de passe trop court'; 
+        document.getElementById('testMessage').innerHTML = 'Mot de passe trop court';
+        isValid = false;
     }
     if(pass.length > 20){
         document.getElementById('testMessage').innerHTML = '';
         document.getElementById('testMessage').innerHTML = 'Mot de passe trop long';
+        isValid = false;
+    }
+    if(isValid){
+        document.body.style.backgroundImage = 'url("../images/logger_claire2_base.png")';
+    }
+    else{
+        document.body.style.backgroundImage = 'url("../images/logger_claire2_orange.png")';
     }
 }
 
